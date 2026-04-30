@@ -9,6 +9,9 @@
       font-family:Arial, sans-serif;
       color:#fff;
       background:#111;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* вся высота экрана */
     }
     header {
       display:flex;
@@ -27,10 +30,15 @@
     nav a.active {
       background:#ff6600;
     }
-    .about {
+    main {
+      flex:1; /* растягивает контент */
       padding:60px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+    .about {
       max-width:800px;
-      margin:0 auto;
       text-align:center;
     }
     .about h2 {
@@ -73,6 +81,7 @@
       background:#000;
       text-align:center;
       padding:20px;
+      border-top:1px solid #444;
     }
   </style>
 </head>
@@ -88,29 +97,31 @@
     </nav>
   </header>
 
-  <div class="about">
-    <h2>О компании Mediavibe Production</h2>
-    <p>Мы специализируемся на создании рекламных конструкций и проектов, которые видят все. 
-       Наша команда объединяет опытных специалистов в области дизайна, проектирования и монтажа.</p>
-    <p>Мы ценим качество, надёжность и креативность, помогая клиентам выделяться и достигать своих целей.</p>
+  <main>
+    <div class="about">
+      <h2>О компании Mediavibe Production</h2>
+      <p>Мы специализируемся на создании рекламных конструкций и проектов, которые видят все. 
+         Наша команда объединяет опытных специалистов в области дизайна, проектирования и монтажа.</p>
+      <p>Мы ценим качество, надёжность и креативность, помогая клиентам выделяться и достигать своих целей.</p>
 
-    <div class="advantages">
-      <div class="advantage">
-        <h3>Опыт</h3>
-        <p>Более 10 лет работы в сфере наружной рекламы и проектирования.</p>
+      <div class="advantages">
+        <div class="advantage">
+          <h3>Опыт</h3>
+          <p>Более 10 лет работы в сфере наружной рекламы и проектирования.</p>
+        </div>
+        <div class="advantage">
+          <h3>Креативность</h3>
+          <p>Индивидуальные решения для каждого клиента и проекта.</p>
+        </div>
+        <div class="advantage">
+          <h3>Надёжность</h3>
+          <p>Гарантия качества и безопасный монтаж конструкций.</p>
+        </div>
       </div>
-      <div class="advantage">
-        <h3>Креативность</h3>
-        <p>Индивидуальные решения для каждого клиента и проекта.</p>
-      </div>
-      <div class="advantage">
-        <h3>Надёжность</h3>
-        <p>Гарантия качества и безопасный монтаж конструкций.</p>
-      </div>
+
+      <a href="contacts.html" class="btn">Связаться с нами</a>
     </div>
-
-    <a href="contacts.html" class="btn">Связаться с нами</a>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2026 Mediavibe Production</p>
