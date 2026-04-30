@@ -37,9 +37,18 @@
       align-items:flex-start; /* контент сверху */
       padding:60px 20px;
     }
-    .contacts {
-      max-width:600px;
-      text-align:center;
+    main {
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;  /* центрируем по вертикали */
+}
+
+.contacts {
+  width:100%;
+  max-width:800px;     /* можно оставить ограничение, чтобы текст не был слишком растянут */
+  padding:40px 20px;
+
     }
     .contacts h2 {
       font-size:36px;
