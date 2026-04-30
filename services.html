@@ -8,7 +8,10 @@
       margin:0;
       font-family:Arial, sans-serif;
       color:#fff;
-      background:#111; /* однотонный фон */
+      background:#111;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* вся высота экрана */
     }
     header {
       display:flex;
@@ -27,8 +30,11 @@
     nav a.active {
       background:#ff6600;
     }
-    .services {
+    main {
+      flex:1; /* растягивает контент */
       padding:60px 20px;
+    }
+    .services {
       text-align:center;
     }
     .services h2 {
@@ -66,10 +72,9 @@
       border-radius:5px;
     }
     footer {
-  margin-top: 40px;   /* чтобы футер не прилипал */
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #444; /* нижняя граница */
+      padding:20px;
+      text-align:center;
+      border-top:1px solid #444;
     }
   </style>
 </head>
@@ -85,31 +90,33 @@
     </nav>
   </header>
 
-  <div class="services">
-    <h2>Наши услуги</h2>
-    <div class="service-list">
-      <div class="service">
-        <h3>Проектирование конструкций</h3>
-        <p>Разрабатываем рекламные конструкции любой сложности с учётом ваших целей.</p>
-        <a href="contacts.html" class="btn">Заказать</a>
-      </div>
-      <div class="service">
-        <h3>Монтаж и установка</h3>
-        <p>Обеспечиваем профессиональный монтаж и безопасную установку конструкций.</p>
-        <a href="contacts.html" class="btn">Заказать</a>
-      </div>
-      <div class="service">
-        <h3>Дизайн и визуализация</h3>
-        <p>Создаём яркие визуальные решения и макеты, чтобы вы заранее видели результат.</p>
-        <a href="contacts.html" class="btn">Заказать</a>
-      </div>
-      <div class="service">
-        <h3>Консультации</h3>
-        <p>Помогаем выбрать оптимальное решение и сопровождаем проект на всех этапах.</p>
-        <a href="contacts.html" class="btn">Заказать</a>
+  <main>
+    <div class="services">
+      <h2>Наши услуги</h2>
+      <div class="service-list">
+        <div class="service">
+          <h3>Проектирование конструкций</h3>
+          <p>Разрабатываем рекламные конструкции любой сложности с учётом ваших целей.</p>
+          <a href="contacts.html" class="btn">Заказать</a>
+        </div>
+        <div class="service">
+          <h3>Монтаж и установка</h3>
+          <p>Обеспечиваем профессиональный монтаж и безопасную установку конструкций.</p>
+          <a href="contacts.html" class="btn">Заказать</a>
+        </div>
+        <div class="service">
+          <h3>Дизайн и визуализация</h3>
+          <p>Создаём яркие визуальные решения и макеты, чтобы вы заранее видели результат.</p>
+          <a href="contacts.html" class="btn">Заказать</a>
+        </div>
+        <div class="service">
+          <h3>Консультации</h3>
+          <p>Помогаем выбрать оптимальное решение и сопровождаем проект на всех этапах.</p>
+          <a href="contacts.html" class="btn">Заказать</a>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2026 Mediavibe Production</p>
