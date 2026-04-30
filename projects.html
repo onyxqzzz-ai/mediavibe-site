@@ -9,6 +9,9 @@
       font-family:Arial, sans-serif;
       color:#fff;
       background:#111;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* вся высота экрана */
     }
     header {
       display:flex;
@@ -27,8 +30,11 @@
     nav a.active {
       background:#ff6600;
     }
-    .projects {
+    main {
+      flex:1; /* растягивает контент */
       padding:60px 20px;
+    }
+    .projects {
       text-align:center;
     }
     .projects h2 {
@@ -71,17 +77,10 @@
       border-radius:5px;
     }
     footer {
-  margin-top: 40px;   /* чтобы футер не прилипал */
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #444; /* нижняя граница */
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
+      padding:20px;
+      text-align:center;
+      border-top:1px solid #444;
+    }
   </style>
 </head>
 <body>
@@ -96,29 +95,31 @@ body {
     </nav>
   </header>
 
-  <div class="projects">
-    <h2>Наши проекты</h2>
-    <div class="project-list">
-      <div class="project">
-        <img src="images/project1.jpg" alt="Проект 1">
-        <h3>Рекламная конструкция для XYZ</h3>
-        <p>Яркая наружная реклама, которая привлекает внимание и повышает узнаваемость бренда.</p>
-        <a href="contacts.html" class="btn">Заказать похожий</a>
-      </div>
-      <div class="project">
-        <img src="images/project2.jpg" alt="Проект 2">
-        <h3>Выставочный стенд</h3>
-        <p>Функциональный и стильный стенд для участия в международной выставке.</p>
-        <a href="contacts.html" class="btn">Заказать похожий</a>
-      </div>
-      <div class="project">
-        <img src="images/project3.jpg" alt="Проект 3">
-        <h3>Оформление фасада</h3>
-        <p>Современное решение для оформления фасада торгового центра.</p>
-        <a href="contacts.html" class="btn">Заказать похожий</a>
+  <main>
+    <div class="projects">
+      <h2>Наши проекты</h2>
+      <div class="project-list">
+        <div class="project">
+          <img src="images/project1.jpg" alt="Проект 1">
+          <h3>Рекламная конструкция для XYZ</h3>
+          <p>Яркая наружная реклама, которая привлекает внимание и повышает узнаваемость бренда.</p>
+          <a href="contacts.html" class="btn">Заказать похожий</a>
+        </div>
+        <div class="project">
+          <img src="images/project2.jpg" alt="Проект 2">
+          <h3>Выставочный стенд</h3>
+          <p>Функциональный и стильный стенд для участия в международной выставке.</p>
+          <a href="contacts.html" class="btn">Заказать похожий</a>
+        </div>
+        <div class="project">
+          <img src="images/project3.jpg" alt="Проект 3">
+          <h3>Оформление фасада</h3>
+          <p>Современное решение для оформления фасада торгового центра.</p>
+          <a href="contacts.html" class="btn">Заказать похожий</a>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2026 Mediavibe Production</p>
