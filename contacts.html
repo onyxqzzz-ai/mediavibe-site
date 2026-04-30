@@ -9,6 +9,9 @@
       font-family:Arial, sans-serif;
       color:#fff;
       background:#111;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh; /* вся высота экрана */
     }
     header {
       display:flex;
@@ -27,10 +30,15 @@
     nav a.active {
       background:#ff6600;
     }
-    .contacts {
+    main {
+      flex:1; /* растягивает контент */
+      display:flex;
+      justify-content:center;
+      align-items:flex-start; /* контент сверху */
       padding:60px 20px;
+    }
+    .contacts {
       max-width:600px;
-      margin:0 auto;
       text-align:center;
     }
     .contacts h2 {
@@ -65,10 +73,9 @@
       cursor:pointer;
     }
     footer {
-  margin-top: 40px;   /* чтобы футер не прилипал */
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #444; /* нижняя граница */
+      padding:20px;
+      text-align:center;
+      border-top:1px solid #444;
     }
   </style>
 </head>
@@ -84,26 +91,26 @@
     </nav>
   </header>
 
-  <div class="contacts">
-    <h2>Свяжитесь с нами</h2>
-    <p>Email: info@mediavibe.com</p>
-   <p>WhatsApp: 
-  <a href="https://wa.me/77083539648?text=Здравствуйте,%20хочу%20заказать%20услугу" target="_blank">
-    +7 (708) 353‑96‑48
-  </a>
-</p>
-
-    <p>Телефон: +7 (777) 123‑45‑67</p>
-    <p>Адрес: г. Алматы, ул. Примерная, 10</p>
+  <main>
+    <div class="contacts">
+      <h2>Свяжитесь с нами</h2>
+      <p>Email: info@mediavibe.com</p>
+      <p>WhatsApp: 
+        <a href="https://wa.me/77083539648?text=Здравствуйте,%20хочу%20заказать%20услугу" target="_blank">
+          +7 (708) 353‑96‑48
+        </a>
+      </p>
+      <p>Телефон: +7 (777) 123‑45‑67</p>
+      <p>Адрес: г. Алматы, ул. Примерная, 10</p>
 
       <form action="mailto:onyxqzzz@gmail.com" method="POST" enctype="text/plain">
-  <input type="text" name="name" placeholder="Ваше имя" required>
-  <input type="email" name="email" placeholder="Ваш email" required>
-  <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
-  <button type="submit" class="btn">Отправить</button>
-</form>
-
-  </div>
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2026 Mediavibe Production</p>
