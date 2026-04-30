@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Mediavibe Production</title>
+  <style>
+    body {
+      margin:0;
+      font-family:Arial, sans-serif;
+      color:#fff;
+      background: url('background.jpg') center/cover no-repeat;
+      }
+    /* затемняющий слой */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); /* 0.5 = плотность дымки */
+      z-index: -1; /* чтобы не перекрывать текст */
+    }
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px;
+      background:#000;
+    }
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:4px;
+    }
+    nav a.active {
+      background:#ff6600; /* подсветка активной кнопки */
+    }
+    .hero {
+  min-height:100vh; /* занимает весь экран */
+  display:flex;
+  flex-direction:column;
+  justify-content:center; /* выравнивание по вертикали */
+  align-items:center;     /* выравнивание по горизонтали */
+  text-align:center;
+}
+
+    .hero h1 {
+      font-size:48px;
+      color:#fff;
+    }
+    .btn {
+      background:#ff6600;
+      color:#fff;
+      padding:15px 30px;
+      text-decoration:none;
+      border-radius:5px;
+    }
+    footer {
+      background:#000;
+      text-align:center;
+      padding:20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Mediavibe Production</div>
+    <nav>
+      <a href="index.html" class="active">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="projects.html">Проекты</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Мы создаём конструкции, которые видят все</h1>
+    <a href="contacts.html" class="btn">Заказать проект</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Mediavibe Production</p>
+  </footer>
+</body>
+</html>
